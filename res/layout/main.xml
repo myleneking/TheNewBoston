@@ -14,14 +14,13 @@
         android:id="@+id/tvDisplay" 
         />
     
-    <Button 
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:text="Add one"
-        android:layout_gravity="center"
-        android:textSize="20dp"
+    <Button
         android:id="@+id/bAdd"
-        />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/custom"
+        android:textSize="20dp" />
     
     <Button 
         android:layout_width="250dp"
