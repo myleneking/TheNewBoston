@@ -54,6 +54,16 @@
             android:label="Camera Application"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".AboutUs"
+            android:label="About Us"
+            android:theme="@android:style/Theme.Dialog" >
+            <intent-filter>
+                <action android:name="com.thenewboston.travis.ABOUT" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
