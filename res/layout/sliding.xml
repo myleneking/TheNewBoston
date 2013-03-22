@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <AbsoluteLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/bHandle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Handle1" />
+
+        <Button
+            android:id="@+id/bHandle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Handle2" />
+
+        <Button
+            android:id="@+id/bHandle3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Handle3" />
+
+        <Button
+            android:id="@+id/bHandle4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Handle4" />
+    </AbsoluteLayout>
+
+    <SlidingDrawer
+        android:id="@+id/slidingD"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:content="@+id/content"
+        android:handle="@+id/handle" >
+
+        <Button
+            android:id="@+id/handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Handle" />
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <CheckBox
+                android:id="@+id/cbSlidable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CheckBox" />
+        </LinearLayout>
+    </SlidingDrawer>
+
+</FrameLayout>
