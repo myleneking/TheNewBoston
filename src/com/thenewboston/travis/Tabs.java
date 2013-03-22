@@ -12,6 +12,8 @@ import android.widget.TextView;
 public class Tabs extends Activity implements OnClickListener {
 
 	TabHost th;
+	TextView showResults;
+	long start, stop, result;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class Tabs extends Activity implements OnClickListener {
 		Button newTab = (Button) findViewById(R.id.bAddTab);
 		Button bStart = (Button) findViewById(R.id.bStartWatch);
 		Button bStop = (Button) findViewById(R.id.bStopWatch);
+		showResults = (TextView) findViewById(R.id.tvShowResults);
 		
 		newTab.setOnClickListener(this);
 		bStart.setOnClickListener(this);
@@ -67,11 +70,21 @@ public class Tabs extends Activity implements OnClickListener {
 			break;
 			
 		case R.id.bStartWatch:
-			
+			start = System.currentTimeMillis();
 			break;
 			
 		case R.id.bStopWatch:
-			
+			stop = System.currentTimeMillis();
+			if (start != 0) {
+				result =stop - start;
+				int millis = (int) result;
+				int seconds = (int) result / 1000;
+				int minutes = seconds / 60;
+				millis = millis % 100;
+				seconds = seconds % 60;
+				showResults.setText(String.format("%d:%02d:%02d", minutes, seconds, millis));
+				start = 0;
+			}
 			break;
 
 		default:
